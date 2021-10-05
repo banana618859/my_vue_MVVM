@@ -1,0 +1,43 @@
+<!--
+ * @Descripttion: unTitle
+ * @Author: yizheng.yuan
+ * @Date: 2021-10-05 15:19:14
+ * @LastEditors: yizheng.yuan
+ * @LastEditTime: 2021-10-05 21:17:07
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p><img src="./img/logo.png"/></p>
+    <h3>自我实现vue的MVVM框架-双向数据绑定</h3>
+    <hr/>
+    <input v-model="name" />
+    {{name}} ---: {{age}} ----: {{msg}}
+  </div>
+
+  <script src="./MVVM.js"></script>
+  <script src="./compiler.js"></script>
+  <script src="./observer.js"></script>
+  <script>
+    var vm = new MVVM({
+      el: '#app',
+      data:{
+        msg: 'hello yiz',
+        name: 'Tom',
+        age: 18,
+        person: {
+          age: 1
+        }
+      }
+    })
+  </script>
+  
+</body>
+</html>
